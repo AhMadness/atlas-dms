@@ -239,6 +239,34 @@ h1 {
     align-items: center;
 }
 
+.capability-matrix {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.capability-matrix article {
+    padding: 22px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--surface);
+}
+
+.capability-matrix strong {
+    display: block;
+    margin-bottom: 12px;
+    color: var(--ink);
+    font-size: 19px;
+}
+
+.capability-matrix ul {
+    display: grid;
+    gap: 8px;
+    margin: 0;
+    padding-left: 20px;
+    color: var(--muted);
+}
+
 .workflow-list {
     display: grid;
     gap: 12px;
@@ -376,6 +404,7 @@ footer {
     .feature-grid,
     .screenshots,
     .deployment-grid,
+    .capability-matrix,
     .workflow,
     .cta {
         grid-template-columns: 1fr;
@@ -396,4 +425,3 @@ footer {
         min-height: 680px;
     }
 }
-
