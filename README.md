@@ -1,7 +1,7 @@
 # Atlas DMS
 
 Private on-prem document management for structured records, controlled access,
-scanning, audit history, and local data ownership.
+scanning, OCR search, mobile access, audit history, and local data ownership.
 
 > This public repository is a product overview only. The Atlas application
 > source code, release packages, private license tools, signing keys, customer
@@ -11,20 +11,24 @@ scanning, audit history, and local data ownership.
 
 ## Product Screenshots
 
-The screenshots below use synthetic sample data and do not show customer
-documents or private deployment details.
+These screenshots were captured from the real Atlas application using
+synthetic development data. They do not show customer documents or private
+deployment secrets.
 
 ![Atlas document workspace](assets/screenshot-document-workspace.png)
 
-| Admin security and sessions | Scanning and storage |
+| Administration overview | Document viewer |
 | --- | --- |
-| ![Atlas admin security view](assets/screenshot-admin-security.png) | ![Atlas scanning and storage view](assets/screenshot-scanning-storage.png) |
+| ![Atlas administration overview](assets/screenshot-admin-security.png) | ![Atlas document viewer](assets/screenshot-scanning-storage.png) |
+
+![Atlas OCR operations](assets/screenshot-ocr-operations.png)
 
 ## What Atlas Is
 
 Atlas DMS is built for organizations that need documents to stay on their own
 server while still having structured metadata, role-based access, scanning,
-search, document history, storage growth, and administrator controls.
+OCR search, read-only mobile access, document history, storage growth, and
+administrator controls.
 
 It is designed for controlled on-prem trials and private customer deployments,
 not public SaaS file sharing.
@@ -61,6 +65,29 @@ not public SaaS file sharing.
 - Export document data to Excel/ZIP where enabled.
 - Review administrative reports for users, departments, required-file gaps,
   lifecycle events, and operational totals.
+
+### OCR and Full-Text Search
+
+- Extract searchable text from uploaded and scanned pages in English and
+  Arabic.
+- Automatically queue new pages created by uploads, scans, replacements,
+  merges, splits, and page insertion.
+- Search inside document files alongside titles, metadata, templates, and
+  departments.
+- Monitor queued, processing, completed, failed, and skipped OCR pages.
+- Control processing windows, queue targets, catch-up processing, and retries
+  from the admin console.
+
+### Mobile App
+
+- Use the read-only React Native app on iPhone and Android.
+- Connect to an Atlas server over the local network or VPN.
+- Search and view permitted documents, metadata, files, and page previews.
+- Use advanced filters, including OCR file-text search when licensed.
+- Download, share, email, and export documents through the authenticated Atlas
+  session.
+- Reuse the same server-side users, permissions, and access rules as the web
+  application.
 
 ### Access Control
 
@@ -145,8 +172,10 @@ The public repository does not include:
 
 ## Availability
 
-Atlas DMS is available only through private demo, trial, or deployment
-discussion with the Atlas vendor.
+Atlas DMS is available through private demos, trials, and deployment
+discussions.
 
-For demos, trials, or deployment planning, contact the Atlas vendor directly.
+For demos, trials, or deployment planning, contact
+[Ahmad Jomaa on LinkedIn](https://www.linkedin.com/in/ahmad-jomaa-950630191/)
+or [email me](mailto:ahmad.jommaa95@gmail.com).
 

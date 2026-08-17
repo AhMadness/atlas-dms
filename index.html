@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Atlas DMS - On-Prem Document Management</title>
-    <meta name="description" content="Atlas DMS is a private on-prem document management system for structured records, access control, scanning, audit history, and local data ownership.">
+    <meta name="description" content="Atlas DMS is a private on-prem document management system with structured records, access control, scanning, OCR search, mobile access, audit history, and local data ownership.">
     <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
@@ -28,7 +28,7 @@
                 <p class="eyebrow">Private on-prem document management</p>
                 <h1>Atlas DMS</h1>
                 <p>
-                    Structured records, controlled access, scanning, audit history, and local storage for teams that need their documents to stay under their own operational control.
+                    Structured records, controlled access, scanning, OCR search, mobile access, audit history, and local storage for teams that need their documents to stay under their own operational control.
                 </p>
                 <div class="hero-actions">
                     <a class="button" href="#features">View capabilities</a>
@@ -64,6 +64,16 @@
                     <span class="tag">Scanning</span>
                     <strong>Workstation scan agent</strong>
                     <p>Let users scan from their own Windows PCs into the browser while files land safely in the server document store.</p>
+                </article>
+                <article class="feature-card">
+                    <span class="tag">OCR</span>
+                    <strong>Search inside document files</strong>
+                    <p>Extract English and Arabic page text, automatically process new uploads and scans, and search file content alongside structured metadata.</p>
+                </article>
+                <article class="feature-card">
+                    <span class="tag">Mobile</span>
+                    <strong>Read-only iPhone and Android access</strong>
+                    <p>Search, preview, download, share, email, and export permitted documents through a React Native client using existing Atlas access rules.</p>
                 </article>
                 <article class="feature-card">
                     <span class="tag">Audit</span>
@@ -138,10 +148,31 @@
                     <strong>Search and reporting</strong>
                     <ul>
                         <li>Search by metadata, title, template, department, and status</li>
+                        <li>English and Arabic OCR file-text search</li>
                         <li>Advanced search conditions</li>
                         <li>Saved filters</li>
                         <li>Excel and ZIP exports where enabled</li>
                         <li>User, department, lifecycle, and missing-file reports</li>
+                    </ul>
+                </article>
+                <article>
+                    <strong>OCR processing</strong>
+                    <ul>
+                        <li>Automatic queueing for uploaded and scanned pages</li>
+                        <li>English and Arabic text extraction</li>
+                        <li>Admin queue health and page lifecycle totals</li>
+                        <li>Catch-up processing for missed pages</li>
+                        <li>Configurable processing windows and queue targets</li>
+                    </ul>
+                </article>
+                <article>
+                    <strong>Mobile app</strong>
+                    <ul>
+                        <li>Read-only React Native client for iPhone and Android</li>
+                        <li>Document, metadata, file, and page preview access</li>
+                        <li>Advanced filters and licensed OCR search</li>
+                        <li>Authenticated download, share, email, and export</li>
+                        <li>Existing Atlas users and permissions</li>
                     </ul>
                 </article>
                 <article>
@@ -183,7 +214,7 @@
                             <span>3</span>
                             <div>
                                 <strong>Search, review, and audit</strong>
-                                <p>Teams find records through metadata and file state while admins retain visibility into changes.</p>
+                        <p>Teams find records through metadata and OCR file text while admins retain visibility into changes.</p>
                             </div>
                         </div>
                     </div>
@@ -197,28 +228,35 @@
         <section id="screenshots" class="section">
             <div class="section-header">
                 <h2>Product views</h2>
-                <p>These public-safe screenshots use synthetic sample data and do not show customer documents or private system details.</p>
+                <p>These screenshots were captured from the real Atlas application using synthetic development data. They do not show customer documents or deployment secrets.</p>
             </div>
             <div class="screenshots">
                 <article class="screenshot-card">
-                    <img src="assets/screenshot-document-workspace.png" alt="Document workspace with list, metadata, and preview">
+                    <img src="assets/screenshot-document-workspace.png" alt="Atlas document workspace with search and structured records">
                     <div>
                         <strong>Document workspace</strong>
-                        <p>Search, metadata, file categories, preview, versions, and page tools in one screen.</p>
+                        <p>Search, advanced filters, structured indexes, exports, batch upload, and document creation in one workspace.</p>
                     </div>
                 </article>
                 <article class="screenshot-card">
-                    <img src="assets/screenshot-admin-security.png" alt="Admin security and session management view">
+                    <img src="assets/screenshot-admin-security.png" alt="Atlas administration overview and system health">
                     <div>
-                        <strong>Admin and security</strong>
-                        <p>Users, groups, departments, permissions, active sessions, audit, storage, and licensing.</p>
+                        <strong>Administration overview</strong>
+                        <p>Application, PostgreSQL, object storage, schema health, usage totals, runtime configuration, and licensing.</p>
                     </div>
                 </article>
                 <article class="screenshot-card">
-                    <img src="assets/screenshot-scanning-storage.png" alt="Scanning and storage volume view">
+                    <img src="assets/screenshot-scanning-storage.png" alt="Atlas structured metadata and multi-page document viewer">
                     <div>
-                        <strong>Scanning and storage</strong>
-                        <p>Workstation scan profile, server upload path, and storage volume failover for growing archives.</p>
+                        <strong>Document viewer</strong>
+                        <p>Structured metadata, file categories, page previews, thumbnails, history, versions, OCR queueing, and download controls.</p>
+                    </div>
+                </article>
+                <article class="screenshot-card">
+                    <img src="assets/screenshot-ocr-operations.png" alt="Atlas OCR queue and processing controls">
+                    <div>
+                        <strong>OCR operations</strong>
+                        <p>Automatic queueing, catch-up processing, processing windows, queue targets, and worker controls.</p>
                     </div>
                 </article>
             </div>
@@ -227,7 +265,7 @@
         <section id="deployment" class="section alt">
             <div class="section-header">
                 <h2>Designed for on-prem trials</h2>
-                <p>Atlas is intended for controlled deployments where the customer keeps documents on their own server and the vendor keeps private source and license tooling private.</p>
+                <p>Atlas is intended for controlled deployments where the customer keeps documents on their own server while source code and license tooling remain private.</p>
             </div>
             <div class="deployment-grid">
                 <article>
@@ -240,7 +278,7 @@
                 </article>
                 <article>
                     <strong>Private source model</strong>
-                    <p>Public material stays separate from the private codebase, release packaging, vendor keys, and customer data.</p>
+                    <p>Public material stays separate from the private codebase, release packaging, signing keys, and customer data.</p>
                 </article>
             </div>
         </section>
@@ -248,9 +286,9 @@
         <section class="section cta">
             <div>
                 <h2>Evaluate Atlas DMS</h2>
-                <p>For a controlled demo, trial license, or deployment discussion, contact the Atlas vendor. Source code and production packages are distributed privately.</p>
+                <p>For a controlled demo, trial license, or deployment discussion, contact me directly. Source code and production packages are distributed privately.</p>
             </div>
-            <a class="button" href="https://github.com/AhMadness/atlas-dms">GitHub overview</a>
+            <a class="button" href="https://www.linkedin.com/in/ahmad-jomaa-950630191/">Contact Ahmad</a>
         </section>
     </main>
 
